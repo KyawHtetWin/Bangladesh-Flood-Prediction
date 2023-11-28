@@ -11,7 +11,7 @@ test_data = pd.read_csv('test_data.csv', index_col='Date', parse_dates=True)
 # Generate predictions
 y_pred = model.predict(test_data.drop(columns=['PRECTOTCORR']))
 
-# Streamlit app layout based on the sketch
+
 st.title('Rainfall Prediction in Rangpur')
 
 # Placeholder for image of Rangpur
