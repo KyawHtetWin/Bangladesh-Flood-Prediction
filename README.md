@@ -12,7 +12,7 @@ As the primary contributor, I have gathered relevant insights from GIS data to i
 ### GIS Data Exploration
 - **Goal**: Analyze GIS data to identify high-risk flood areas in Bangladesh.
 - **Achievement**: Provided insightful recommendations and visualizations of topological features influencing flood susceptibility.
-- **Folder**: [GIS High-risk Flood Areas Exploration](https://github.com/KyawHtetWin/Bangladesh-Flood-Prediction/tree/main/Dhaka%20Flood%20Prediction%20Model)
+- **Folder**: [GIS High-risk Flood Areas Exploration](https://github.com/KyawHtetWin/Bangladesh-Flood-Prediction/tree/main/GIS%20High-risk%20Flood%20Areas%20Exploration)
 
 ### Flood Prediction Modeling in Dhaka
 - **Goal**: Develop a classification model to predict flood events in Dhaka based on spatial and temporal data.
