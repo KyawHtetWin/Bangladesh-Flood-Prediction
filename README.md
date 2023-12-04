@@ -1,20 +1,18 @@
 # FloodGuard: Integrating Rainfall Time Series and GIS Data for Flood Prediction and Waterbody Forecasting in Bangladesh
 
 ## Project Overview
-This repository is a collection of my contributions aimed at developing predictive models to assist flood prediction in Bangladesh. [Omdena Project Link](https://omdena.com/chapter-challenges/floodguard-integrating-rainfall-time-series-and-gis-data-for-flood-prediction-and-waterbody-forecasting-in-bangladesh/)
-The models span two major cities, Dhaka and Rangpur, focusing on flood prediction and rainfall forecasting respectively.
+This repository is a collection of my contributions to a Bangladesh local chapter at Omdena working to build predictive models to assist flood management in Bangladesh [Project](https://omdena.com/chapter-challenges/floodguard-integrating-rainfall-time-series-and-gis-data-for-flood-prediction-and-waterbody-forecasting-in-bangladesh/).
 
 ## Contribution Summary
 
-As the primary contributor, I have gathered relevant insights from GIS data to inform model development, performed flood classification modeling in Dhaka, and rainfall prediction in Rangpur,
-employing a variety of machine-learning techniques to address the issue of floods in Bangladesh.
+As the primary contributor, I have gathered relevant insights from GIS data to inform model development, performed flood classification modeling in Dhaka, and rainfall prediction in Rangpur while employing a variety of machine-learning techniques to address the project goal.
 
 ## Project Goals and Achievements
 
 ### GIS Data Exploration
 - **Goal**: Analyze GIS data to identify high-risk flood areas in Bangladesh.
 - **Achievement**: Provided insightful recommendations and visualizations of topological features influencing flood susceptibility.
-- **Folder**: [GIS Data Exploration](./GIS-Data-Exploration)
+- **Folder**: [GIS Data Exploration](./GIS High-risk Flood Areas Exploration)
 
 ### Flood Prediction Modeling in Dhaka
 - **Goal**: Develop a classification model to predict flood events in Dhaka based on spatial and temporal data.
