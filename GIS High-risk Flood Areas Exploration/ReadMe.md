@@ -2,9 +2,9 @@
 
 ## Contribution
 
-As a key member of the data team, my role was centered on exploring various GIS datasets to gain insights into areas at high risk of flooding in Bangladesh. My work involved detailed analysis and visualization, leading to actionable recommendations crucial for the development of an effective flood prediction model.
+As a key member of the data team, I explored various GIS datasets to gain insights into areas at high risk of flooding in Bangladesh. My work involved detailed analysis and visualization, leading to actionable recommendations informing the model development downstream.
 
-## Data Analysis and Insights
+## Key Data Insights
 
 ### 1. Elevation Data Analysis (Shuttle Radar Topography Mission - SRTM)
 - **Objective**: To identify flood-prone areas based on elevation.
@@ -28,7 +28,7 @@ As a key member of the data team, my role was centered on exploring various GIS 
 - **Objective**: To evaluate soil conditions that contribute to flood risk.
 - **Key Recommendations**:
     - Identified districts with high soil saturation, indicating increased flood risk.
-    - Recommended integrating elevation data for a comprehensive understanding of rainfall runoff impacts.
+    - Recommended integrating elevation data for a comprehensive understanding of rainfall-runoff impacts.
     - Suggested considering land use/cover in correlation with soil and elevation data to assess flood risk accurately.
 
 ## Conclusion
