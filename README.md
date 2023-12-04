@@ -17,7 +17,7 @@ As the primary contributor, I have gathered relevant insights from GIS data to i
 ### Flood Prediction Modeling in Dhaka
 - **Goal**: Develop a classification model to predict flood events in Dhaka based on spatial and temporal data.
 - **Achievement**: Constructed a Random Forest model that effectively predicts flood events, with an emphasis on recall and Cohen Kappa Score.
-- **Folder**: [Flood Prediction Dhaka](./Flood-Prediction-Dhaka)
+- **Folder**: [Dhaka  Flood Prediction Model]([./Flood-Prediction-Dhaka](https://github.com/KyawHtetWin/Bangladesh-Flood-Prediction/tree/main/Dhaka%20Flood%20Prediction%20Model))
 
 ### Average Rainfall Prediction in Rangpur
 - **Goal**: Forecast average daily rainfall in Rangpur using historical weather patterns.
