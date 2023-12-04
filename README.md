@@ -1,7 +1,7 @@
 # FloodGuard: Integrating Rainfall Time Series and GIS Data for Flood Prediction and Waterbody Forecasting in Bangladesh
 
 ## Project Overview
-This repository is a collection of my contributions to a Bangladesh local chapter at Omdena working to build forecast models to assist the local flood management efforts [(Project Page)](https://omdena.com/chapter-challenges/floodguard-integrating-rainfall-time-series-and-gis-data-for-flood-prediction-and-waterbody-forecasting-in-bangladesh/).
+This repository is a collection of my contributions to a Bangladesh local chapter at Omdena working to build forecast models to assist the local flood management efforts [(Omdena Project Page)](https://omdena.com/chapter-challenges/floodguard-integrating-rainfall-time-series-and-gis-data-for-flood-prediction-and-waterbody-forecasting-in-bangladesh/).
 
 ## Contribution Summary
 
@@ -12,17 +12,17 @@ As the primary contributor, I have gathered relevant insights from GIS data to i
 ### GIS Data Exploration
 - **Goal**: Analyze GIS data to identify high-risk flood areas in Bangladesh.
 - **Achievement**: Provided insightful recommendations and visualizations of topological features influencing flood susceptibility.
-- **Folder**: [GIS High-risk Flood Areas Exploration](https://github.com/KyawHtetWin/Bangladesh-Flood-Prediction/tree/main/GIS%20High-risk%20Flood%20Areas%20Exploration)
+- **Folder**: GIS High-risk Flood Areas Exploration
 
 ### Flood Prediction Modeling in Dhaka
 - **Goal**: Develop a classification model to predict flood events in Dhaka based on spatial and temporal data.
 - **Achievement**: Constructed a Random Forest model that effectively predicts flood events, with an emphasis on recall and Cohen Kappa Score.
-- **Folder**: [Dhaka  Flood Prediction Model]([./Flood-Prediction-Dhaka](https://github.com/KyawHtetWin/Bangladesh-Flood-Prediction/tree/main/Dhaka%20Flood%20Prediction%20Model))
+- **Folder**: Dhaka  Flood Prediction Model
 
 ### Average Rainfall Prediction in Rangpur
 - **Goal**: Forecast average daily rainfall in Rangpur using historical weather patterns.
 - **Achievement**: Created an XGBoost regression model with fine-tuned hyperparameters, providing reliable rainfall predictions.
-- **Folder**: [Rainfall Prediction Rangpur](./Rainfall-Prediction-Rangpur)
+- **Folder**: Rangpur_Rainfall_Prediction
 
 ### Key Technologies
 - Geographic Information System (GIS)
