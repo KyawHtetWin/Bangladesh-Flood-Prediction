@@ -89,15 +89,18 @@ forecast_data['Year'] = forecast_data.index.year
 # Show yearly summary
 # Aggregate data by year
 yearly_data = forecast_data.groupby('Year').agg({'PRECTOTCORR': 'sum', 'Predicted Precipitation (mm)': 'sum'})
-
 # Reset the index so that 'Year' is a column and not an index
 yearly_data.reset_index(inplace=True)
 
+# Round the numerical columns to two decimal places
+yearly_data['Actual Total Rainfall (mm)'] = yearly_data['PRECTOTCORR'].round(2)
+yearly_data['Predicted Total Rainfall (mm)'] = yearly_data['Predicted Precipitation (mm)'].round(2)
+
+# Drop the original columns to avoid duplication
+yearly_data.drop(columns=['PRECTOTCORR', 'Predicted Precipitation (mm)'], inplace=True)
+
 # Rename columns for clarity
-yearly_data.rename(columns={'Year': 'Year', 
-                            'PRECTOTCORR': 'Actual Total Rainfall (mm)', 
-                            'Predicted Precipitation (mm)': 'Predicted Total Rainfall (mm)'}, 
-                   inplace=True)
+yearly_data.rename(columns={'Year': 'Year'}, inplace=True)
 
 # Display the table
 st.header('Yearly Rainfall Comparison')
