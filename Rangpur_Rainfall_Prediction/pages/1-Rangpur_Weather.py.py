@@ -3,19 +3,32 @@ import pandas as pd
 import joblib
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
+import os
+import numpy as np
+
+# Get current directory
+current_dir = os.path.dirname(__file__)
+
+# Construct path to artifactory directory
+artifactory_dir = os.path.join(current_dir, '..', 'artifactory')
+
+# Construct path for the files
+model_path = os.path.join(artifactory_dir, 'xgboost_rangpur_model.joblib')
+testdata_path = os.path.join(artifactory_dir, 'rangpur_test.csv')
+image_path = os.path.join(artifactory_dir, 'Rangpur_1.jpg')
 
 # Load the model and test data
-model = joblib.load('final_xgboost_model.joblib')
-test_data = pd.read_csv('test_data.csv', index_col='Date', parse_dates=True)
+model = joblib.load(model_path )
+test_data = pd.read_csv(testdata_path, index_col='Date', parse_dates=True)
 
 # Generate predictions
-y_pred = model.predict(test_data.drop(columns=['PRECTOTCORR']))
+y_pred = np.abs(model.predict(test_data.drop(columns=['PRECTOTCORR'])))
 
 
 st.title('Rainfall Prediction in Rangpur')
 
 # Placeholder for image of Rangpur
-st.image('Rangpur_1.jpg', caption='Tajhat Palace in Rangpur')  
+st.image(image_path, caption='Tajhat Palace in Rangpur')  
 
 st.header('Motivation & Goal:')
 st.write('Rangpur is a major city in northwestern Bangladesh located along the Ghaghat River and is part of the Rangpur Division. Since it is known to be affected by flooding, the average precipitation for the city is provided based on the weather pattern.')
