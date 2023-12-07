@@ -81,3 +81,33 @@ ax.set_ylabel('Precipitation (mm)')
 ax.legend()
 plt.tight_layout()  # Improve layout to accommodate rotated x-axis labels
 st.pyplot(fig)
+
+
+st.header("Monsoon Season Precipitation")
+# Given the importance of Monsoon, let's plot the monthly rainfall for Monsoon season
+# Aggregate data by month and year
+forecast_data['Month'] = forecast_data.index.month
+forecast_data['Year'] = forecast_data.index.year
+monthly_data = forecast_data.groupby(['Year', 'Month']).agg({'PRECTOTCORR': 'sum', 'Predicted Precipitation (mm)': 'sum'})
+
+# Filter for monsoon months (June to October)
+monsoon_data = monthly_data.loc[(monthly_data.index.get_level_values(1) >= 6) & (monthly_data.index.get_level_values(1) <= 10)]
+
+# Plotting
+fig, ax = plt.subplots(figsize=(10, 6))
+width = 0.35  # Width of the bars
+
+# Creating bars for actual and predicted data
+ax.bar(monsoon_data.index - width/2, monsoon_data['PRECTOTCORR'], width, label='Actual')
+ax.bar(monsoon_data.index + width/2, monsoon_data['Predicted Precipitation (mm)'], width, label='Predicted')
+
+# Formatting the plot
+ax.set_xlabel('Year, Month')
+ax.set_ylabel('Total Precipitation (mm)')
+ax.set_title('Monsoon Rainfall: Actual vs Predicted')
+ax.legend()
+ax.set_xticks(monsoon_data.index)
+ax.set_xticklabels([f'{year}-{month}' for year, month in monsoon_data.index], rotation=45)
+
+plt.tight_layout()
+st.pyplot(fig)
