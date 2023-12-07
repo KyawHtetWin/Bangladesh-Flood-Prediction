@@ -93,21 +93,28 @@ monthly_data = forecast_data.groupby(['Year', 'Month']).agg({'PRECTOTCORR': 'sum
 # Filter for monsoon months (June to October)
 monsoon_data = monthly_data.loc[(monthly_data.index.get_level_values(1) >= 6) & (monthly_data.index.get_level_values(1) <= 10)]
 
+# Create a numerical index for plotting
+num_index = range(len(monsoon_data))
+
 # Plotting
 fig, ax = plt.subplots(figsize=(10, 6))
-width = 0.35  # Width of the bars
 
 # Creating bars for actual and predicted data
-ax.bar(monsoon_data.index - width/2, monsoon_data['PRECTOTCORR'], width, label='Actual')
-ax.bar(monsoon_data.index + width/2, monsoon_data['Predicted Precipitation (mm)'], width, label='Predicted')
+ax.bar([x - width/2 for x in num_index], monsoon_data['PRECTOTCORR'], width, label='Actual')
+ax.bar([x + width/2 for x in num_index], monsoon_data['Predicted Precipitation (mm)'], width, label='Predicted')
 
 # Formatting the plot
 ax.set_xlabel('Year, Month')
 ax.set_ylabel('Total Precipitation (mm)')
 ax.set_title('Monsoon Rainfall: Actual vs Predicted')
 ax.legend()
-ax.set_xticks(monsoon_data.index)
-ax.set_xticklabels([f'{year}-{month}' for year, month in monsoon_data.index], rotation=45)
+
+# Setting custom x-ticks
+ax.set_xticks(num_index)
+ax.set_xticklabels([f'{year}-{month:02d}' for year, month in monsoon_data.index], rotation=45)
 
 plt.tight_layout()
 st.pyplot(fig)
+
+
+
