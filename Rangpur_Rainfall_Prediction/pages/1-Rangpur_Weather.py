@@ -98,7 +98,7 @@ num_index = range(len(monsoon_data))
 
 # Plotting
 fig, ax = plt.subplots(figsize=(10, 6))
-
+width = 0.35
 # Creating bars for actual and predicted data
 ax.bar([x - width/2 for x in num_index], monsoon_data['PRECTOTCORR'], width, label='Actual')
 ax.bar([x + width/2 for x in num_index], monsoon_data['Predicted Precipitation (mm)'], width, label='Predicted')
