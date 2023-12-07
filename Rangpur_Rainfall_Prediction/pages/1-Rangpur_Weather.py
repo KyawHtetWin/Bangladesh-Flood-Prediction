@@ -82,12 +82,30 @@ ax.legend()
 plt.tight_layout()  # Improve layout to accommodate rotated x-axis labels
 st.pyplot(fig)
 
+# Extract month and year
+forecast_data['Month'] = forecast_data.index.month
+forecast_data['Year'] = forecast_data.index.year
+
+# Show yearly summary
+# Aggregate data by year
+yearly_data = forecast_data.groupby('Year').agg({'PRECTOTCORR': 'sum', 'Predicted Precipitation (mm)': 'sum'})
+
+# Reset the index so that 'Year' is a column and not an index
+yearly_data.reset_index(inplace=True)
+
+# Rename columns for clarity
+yearly_data.rename(columns={'Year': 'Year', 
+                            'PRECTOTCORR': 'Actual Total Rainfall (mm)', 
+                            'Predicted Precipitation (mm)': 'Predicted Total Rainfall (mm)'}, 
+                   inplace=True)
+
+# Display the table
+st.header('Yearly Rainfall Comparison')
+st.table(yearly_data)
+
 
 st.header("Monsoon Season Precipitation")
 # Given the importance of Monsoon, let's plot the monthly rainfall for Monsoon season
-# Aggregate data by month and year
-forecast_data['Month'] = forecast_data.index.month
-forecast_data['Year'] = forecast_data.index.year
 monthly_data = forecast_data.groupby(['Year', 'Month']).agg({'PRECTOTCORR': 'sum', 'Predicted Precipitation (mm)': 'sum'})
 
 # Filter for monsoon months (June to October)
